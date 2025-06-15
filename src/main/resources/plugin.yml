@@ -1,0 +1,11 @@
+name: The_Guards
+version: '2.0'
+main: fr.thefox580.theGuards.TheGuards
+api-version: '1.21'
+authors: [TheFox580]
+
+commands:
+  start:
+    description: starts / restarts the gameplay
+    permission: op
+    permission-message: "&cYou do not have the required permissions to start the hardcore player selection"
