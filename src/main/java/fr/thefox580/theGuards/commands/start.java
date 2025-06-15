@@ -3,7 +3,6 @@ package fr.thefox580.theGuards.commands;
 import fr.thefox580.theGuards.TheGuards;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -21,11 +20,7 @@ public class start implements CommandExecutor {
 
         FileConfiguration config = TheGuards.getInstance().getConfig();
 
-        boolean isReset = false;
-
-        if (config.get("player_uuid") != null){
-            isReset = true;
-        }
+        boolean isReset = config.get("player_uuid") != null;
 
         int randomNumber = new Random().nextInt(Bukkit.getOnlinePlayers().size());
 
